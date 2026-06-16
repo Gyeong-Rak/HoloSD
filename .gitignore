@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# uv-managed virtualenv — recreate on the target with `uv sync` (do NOT commit;
+# the current .venv is a 5GB symlink to ../LieSD/.venv and is not portable)
+# (no trailing slash so it also matches the symlink, not just a real dir)
+.venv
+
+# Training artifacts (regenerate by training / eval)
+# NOTE: keep these patterns comment-free — a trailing "# ..." becomes part of
+# the pattern and silently stops it from matching.
+*.pkl
+*.mp4
+
+# Not shipped to GitHub: docs/reports/results, raw experiment outputs,
+# archived experiment lineage (non-final code & scripts:
+# ablation / csd / chart / obstacle / snake / old 3-method), and scratch.
+# All kept on disk, just untracked.
+docs/
+exp/
+_history/
+_trash/
+
+# OS / editor
+.DS_Store

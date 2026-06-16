@@ -1,0 +1,20 @@
+[project]
+name = "holosd"
+version = "0.1.0"
+description = "HoloSD: holonomy-aware skill discovery for SE(2) locomotion of a nonholonomic Reeds-Shepp car (JAX). Phase A learns a reward-free, max-volume, effort-constrained controllability chart; Phase B reaches SE(2) goal poses zero-shot via a chart carrot plus a raw-heading channel."
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "jax[cuda12]==0.4.38",
+    "flax==0.10.2",
+    "optax==0.2.4",
+    "numpy==2.2.6",
+    "matplotlib==3.9.2",
+    "imageio[ffmpeg]==2.36.1",
+]
+
+# This is an application (run as `python -m holosd.<entry>`), not an installable
+# library, so uv should NOT try to build/install the holosd package itself —
+# it only manages the dependency environment.
+[tool.uv]
+package = false
